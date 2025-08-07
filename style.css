@@ -1,0 +1,86 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Header */
+header h1 {
+    color: #1a73e8;
+    margin-bottom: 20px;
+}
+
+/* Game Board */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Individual Cells */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #e8f0fe;
+}
+
+/* Player Marks */
+.cell.x {
+    color: #ea4335; /* Google Red */
+}
+
+.cell.o {
+    color: #4285f4; /* Google Blue */
+}
+
+/* Winning Cells Highlight */
+.cell.win {
+    background-color: #34a853; /* Google Green */
+    color: #fff;
+}
+
+
+/* Status Message */
+#status {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    min-height: 1.5em; /* Prevent layout shift */
+}
+
+/* New Game Button */
+#new-game-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#new-game-button:hover {
+    background-color: #1558b8;
+}
